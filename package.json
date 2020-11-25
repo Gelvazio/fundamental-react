@@ -43,7 +43,7 @@
     "test": "npm run test:dev -- --watch",
     "test:storybook:setup": "npm run build:storybook && cross-env BABEL_ENV=test jest --no-cache --config=./storybook-testing/jest.config.js",
     "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
-    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rimraf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'"
+    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.10.2",
@@ -81,7 +81,6 @@
     "@storybook/addon-docs": "6.0.16",
     "@storybook/addon-knobs": "6.0.16",
     "@storybook/addon-storyshots": "6.0.16",
-    "@storybook/addon-storyshots-puppeteer": "6.0.16",
     "@storybook/addon-storysource": "6.0.16",
     "@storybook/addon-viewport": "6.0.16",
     "@storybook/components": "6.0.16",
